@@ -1,0 +1,150 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+h1 {
+    color: #2a5885;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #e9f0f7;
+}
+
+nav ul li.active a {
+    background-color: #2a5885;
+    color: white;
+}
+
+/* Filter Styles */
+.filter-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+.filter-group select,
+.filter-group input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn {
+    background-color: #2a5885;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1c4066;
+}
+
+.hidden {
+    display: none;
+}
+
+#custom-dates {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+    background-color: #e9f0f7;
+    border: 1px solid #cad5e2;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #d0e0f2;
+}
+
+/* Star Button */
+.star-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: color 0.3s ease;
+}
+
+.star-btn.active {
+    color: #ffd700;
+}

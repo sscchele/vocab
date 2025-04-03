@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Learning - Quiz</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vocabulary Learning</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Flashcards</a></li>
+                    <li class="active"><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="filter-container">
+            <div class="filter-group">
+                <label for="time-filter">Time Filter:</label>
+                <select id="time-filter">
+                    <option value="today">Today</option>
+                    <option value="yesterday">Yesterday</option>
+                    <option value="this-week">This Week</option>
+                    <option value="last-week">Last Week</option>
+                    <option value="last-month">Last Month</option>
+                    <option value="custom">Custom</option>
+                </select>
+                <div id="custom-dates" class="hidden">
+                    <input type="date" id="custom-date-start">
+                    <input type="date" id="custom-date-end">
+                    <button id="apply-date">Apply</button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="word-filter">Word Filter:</label>
+                <select id="word-filter">
+                    <option value="all">All Words</option>
+                    <option value="wrong">Most Wrong</option>
+                    <option value="starred">Starred</option>
+                    <option value="random">Random Shuffle</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="quiz-type">Quiz Type:</label>
+                <select id="quiz-type">
+                    <option value="word-meaning">Word → Meaning</option>
+                    <option value="meaning-word">Meaning → Word</option>
+                </select>
+            </div>
+
+            <button id="start-quiz" class="btn">Start Quiz</button>
+        </div>
+
+        <div class="quiz-container">
+            <div class="quiz-question">
+                <h2 id="question">Question goes here</h2>
+                <button class="star-btn" id="star-btn">★</button>
+            </div>
+
+            <div class="options-container">
+                <div class="option" data-index="0">
+                    <input type="radio" name="answer" id="option0" value="0">
+                    <label for="option0" id="option0-text">Option 1</label>
+                </div>
+                <div class="option" data-index="1">
+                    <input type="radio" name="answer" id="option1" value="1">
+                    <label for="option1" id="option1-text">Option 2</label>
+                </div>
+                <div class="option" data-index="2">
+                    <input type="radio" name="answer" id="option2" value="2">
+                    <label for="option2" id="option2-text">Option 3</label>
+                </div>
+                <div class="option" data-index="3">
+                    <input type="radio" name="answer" id="option3" value="3">
+                    <label for="option3" id="option3-text">Option 4</label>
+                </div>
+            </div>
+
+            <div class="feedback hidden" id="feedback">
+                <p id="feedback-text"></p>
+                <p>Correct answer: <span id="correct-answer"></span></p>
+            </div>
+
+            <div class="quiz-navigation">
+                <button id="submit-btn" class="btn">Submit</button>
+                <div class="nav-buttons hidden" id="nav-buttons">
+                    <button id="prev-btn" class="nav-btn">Previous</button>
+                    <span id="question-counter">1/10</span>
+                    <button id="next-btn" class="nav-btn">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="results-container hidden" id="results-container">
+            <h2>Quiz Results</h2>
+            <p>Score: <span id="score">0/0</span></p>
+            <div id="mistakes-summary">
+                <h3>Mistakes Summary:</h3>
+                <ul id="mistakes-list"></ul>
+            </div>
+            <button id="retry-wrong" class="btn">Retry Wrong Words</button>
+            <button id="new-quiz" class="btn">New Quiz</button>
+        </div>
+    </div>
+
+    <script src="js/firebase-config.js"></script>
+    <script src="js/data-manager.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "020425-01",
+    "correctWord": "Ephemeral",
+    "meaning": "Lasting for a very short time",
+    "synonyms": ["transitory", "fleeting", "evanescent", "momentary"],
+    "options": ["Permanent", "Lasting", "Durable"]
+  },
+  {
+    "id": "020425-02",
+    "correctWord": "Ameliorate",
+    "meaning": "Make something bad or unsatisfactory better",
+    "synonyms": ["improve", "better", "enhance", "enrich"],
+    "options": ["Worsen", "Aggravate", "Exacerbate"]
+  },
+  {
+    "id": "020425-03",
+    "correctWord": "Sagacious",
+    "meaning": "Having or showing keen mental discernment and good judgment",
+    "synonyms": ["wise", "clever", "insightful", "perceptive"],
+    "options": ["Foolish", "Stupid", "Ignorant"]
+  },
+  {
+    "id": "020425-04",
+    "correctWord": "Obfuscate",
+    "meaning": "Make obscure, unclear, or unintelligible",
+    "synonyms": ["confuse", "bewilder", "obscure", "complicate"],
+    "options": ["Clarify", "Explain", "Illuminate"]
+  },
+  {
+    "id": "020425-05",
+    "correctWord": "Loquacious",
+    "meaning": "Tending to talk a great deal; garrulous",
+    "synonyms": ["talkative", "garrulous", "verbose", "chatty"],
+    "options": ["Silent", "Quiet", "Reserved"]
+  }
+]

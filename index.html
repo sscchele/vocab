@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Learning - Flashcards</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="flashcard.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vocabulary Learning</h1>
+            <nav>
+                <ul>
+                    <li class="active"><a href="index.html">Flashcards</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="filter-container">
+            <div class="filter-group">
+                <label for="time-filter">Time Filter:</label>
+                <select id="time-filter">
+                    <option value="today">Today</option>
+                    <option value="yesterday">Yesterday</option>
+                    <option value="this-week">This Week</option>
+                    <option value="last-week">Last Week</option>
+                    <option value="last-month">Last Month</option>
+                    <option value="custom">Custom</option>
+                </select>
+                <div id="custom-dates" class="hidden">
+                    <input type="date" id="custom-date-start">
+                    <input type="date" id="custom-date-end">
+                    <button id="apply-date">Apply</button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="word-filter">Word Filter:</label>
+                <select id="word-filter">
+                    <option value="all">All Words</option>
+                    <option value="wrong">Most Wrong</option>
+                    <option value="starred">Starred</option>
+                    <option value="random">Random Shuffle</option>
+                </select>
+            </div>
+
+            <button id="apply-filters" class="btn">Apply Filters</button>
+        </div>
+
+        <div class="flashcard-container">
+            <div class="flashcard" id="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2 id="word">Word</h2>
+                        <button class="star-btn" id="star-btn">★</button>
+                    </div>
+                    <div class="flashcard-back">
+                        <h3>Meaning:</h3>
+                        <p id="meaning">Word meaning appears here.</p>
+                        <h3>Synonyms:</h3>
+                        <p id="synonyms">Synonyms appear here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                <button id="prev-btn" class="nav-btn">Previous</button>
+                <span id="card-counter">1/10</span>
+                <button id="next-btn" class="nav-btn">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="firebase-config.js"></script>
+    <script src="data-manager.js"></script>
+    <script src="flashcard.js"></script>
+</body>
+</html>
